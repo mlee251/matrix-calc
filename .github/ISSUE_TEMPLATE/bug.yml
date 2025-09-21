@@ -1,0 +1,32 @@
+name: Bug report
+description: Reporte um problema no matrix-calc
+labels: ["bug"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Descreva como reproduzir o bug passo a passo.
+      placeholder: "1) Comando executado...\n2) Arquivo de entrada...\n3) Resultado observado..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+      description: O que você esperava que acontecesse?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento atual
+      description: O que aconteceu de fato (logs, mensagens, prints)?
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Ambiente
+      description: SO, versão do matrix-calc, flags do CLI, etc.
+      placeholder: "SO: Ubuntu 22.04\nmatrix-calc: v0.1.0\nComando: matrix mul --in A.txt --in2 B.txt --out C.txt"
